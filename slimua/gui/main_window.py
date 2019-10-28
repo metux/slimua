@@ -27,3 +27,7 @@ class MainWindow(Gtk.Window):
 
         print "hsplit="+str(self.settings['gui.mainwindow.hsplit'])
         self.vp.set_position(2000)
+
+    def select_mailbox(self, mbox):
+        print ("MainWindow: user selected mailbox: "+mbox.name)
+        self.tv.get_buffer().set_text("MainWindow: user selected mailbox: "+mbox.name)

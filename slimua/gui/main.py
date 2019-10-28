@@ -15,3 +15,6 @@ class Main:
         win.show_all()
         win.maximize()
         Gtk.main()
+
+    def select_mainbox(self, mbox):
+        print("[Main] User selected mailbox: "+mbox.name)

@@ -20,15 +20,9 @@ class MailboxTreeView:
 #        self.selection.set_mode(Gtk.SELECTION_SINGLE)
 
     def on_selection_changed(self, selection):
-        print "on_selection_changed"
         (tree_model, tree_iter) = selection.get_selected()
-        print(tree_model.get_value(tree_iter, 0))
-        pprint(tree_model.get_value(tree_iter, 1))
-
-        (model, pathlist) = selection.get_selected_rows()
-        p = pathlist[0]
-        pprint(p.get_indices())
-        mbx = self.treestore.get_by_path(p.get_indices())
+        mbox = tree_model.get_value(tree_iter, 1)
+        self.master.select_mailbox(mbox)
 
     def on_activated(self, widget, row, col):
         print("on_activated")
