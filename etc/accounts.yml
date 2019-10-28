@@ -1,0 +1,10 @@
+---
+accounts:
+#    metux-its@web.de:
+#        driver: imap
+#        server: imap.web.de
+#        username: metux-its@web.de
+#        passwd: "Knollo123"
+    local:
+        driver: maildir
+        path: /home/nekrad/Maildir

@@ -1,0 +1,12 @@
+#!/usr/bin/python2
+
+from slimua.gui import Main
+from slimua.model import Settings, Mailstore
+from pprint import pprint
+
+settings = Settings()
+settings['config.prefix'] = 'etc'
+
+mailstore = Mailstore(settings)
+
+Main(settings, mailstore).run()
