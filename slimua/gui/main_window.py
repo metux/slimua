@@ -11,6 +11,10 @@ class MainWindow(Gtk.Window):
     def __init__(self, settings, mailstore):
         Gtk.Window.__init__(self, title="SliMUA")
 
+        guiconf = settings.get_guiconf()
+        hsplit = guiconf['mainwindow.horizontal-split']
+        vsplit = guiconf['mainwindow.vertical-split']
+
         self.settings = settings
         self.mailstore = mailstore
 

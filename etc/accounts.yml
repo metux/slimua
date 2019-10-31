@@ -1,10 +1,11 @@
 ---
 accounts:
-#    metux-its@web.de:
-#        driver: imap
-#        server: imap.web.de
-#        username: metux-its@web.de
-#        passwd: "Knollo123"
+    metux-its@web.de:
+        driver:   imap
+        server:   imap.web.de
+        username: metux-its@web.de
+        passwd:   "Knollo123"
+        port:     993
     local:
         driver: maildir
         path: /home/nekrad/Maildir

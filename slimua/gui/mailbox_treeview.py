@@ -2,8 +2,8 @@ from slimua.gui import Gtk
 from pprint import pprint
 
 class MailboxTreeView:
-    def __init__(self, master, treestore):
-        self.master = master
+    def __init__(self, mainwin, treestore):
+        self.mainwin = mainwin
         self.treestore = treestore
 
         self.tree_view = Gtk.TreeView(self.treestore.get_store())
@@ -22,7 +22,7 @@ class MailboxTreeView:
     def on_selection_changed(self, selection):
         (tree_model, tree_iter) = selection.get_selected()
         mbox = tree_model.get_value(tree_iter, 1)
-        self.master.select_mailbox(mbox)
+        self.mainwin.select_mailbox(mbox)
 
     def on_activated(self, widget, row, col):
         print("on_activated")
